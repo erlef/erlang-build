@@ -40,6 +40,8 @@ Not all of those requirements need to be fulfilled to get started.
 * Creates Build SBoMs for Builds
   - [CycloneDX](https://cyclonedx.org/) & [SPDX](https://spdx.dev/) Formats
 * Creates verifiable [SLSA](https://slsa.dev/) Provenance for Builds
+* Windows builds signed via Azure Trusted Signing
+* macOS builds notarized (infrastructure TBD)
 * Can build multiple flavors, Examples:
   - Dynamically Linked vs Statically Linked
   - Different Library Support like OpenSSL v1 vs v3
