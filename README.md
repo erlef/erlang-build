@@ -23,6 +23,7 @@ Erlang/OTP binary distribution infrastructure.
 | [Erlang Solutions](https://www.erlang-solutions.com/downloads-2/) | ✓ | | ✓ | | ✓ | ✓ | | Ubuntu, Debian, Fedora, CentOS, Raspbian |
 | [Hex.pm Bob](https://github.com/hexpm/bob) | ✓ | ✓ | ✓ | ✓ | | ✓ | ✓ | Ubuntu 20.04/22.04/24.04 |
 | [Burrito Erlang Builder](https://github.com/burrito-elixir/erlang-builder) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | | OTP 25.3+, for Burrito |
+| [BEAM runtime](https://meta-erlang.github.io/beamruntime/intro/) | ✓ | ✓ | | | | ✓ | ✓ | runtime relocated based on libc or musl |
 | [Alpine Linux](https://pkgs.alpinelinux.org/package/v3.21/community/x86/erlang) | ✓ | ✓ | | | | ✓ | | musl-based, also armhf/armv7/ppc64le/s390x |
 | [Docker Erlang OTP](https://github.com/erlang/docker-erlang-otp) | ✓ | ✓ | | | | | ✓ | Official Docker library image |
 
