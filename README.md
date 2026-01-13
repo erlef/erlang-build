@@ -4,6 +4,40 @@
 [Erlang Ecosystem Foundation (EEF)](https://erlef.org/) to create a unified
 Erlang/OTP binary distribution infrastructure.
 
+## Motivation
+
+The Erlang/OTP binary distribution landscape is fragmented. As the [Current
+Providers](#current-providers) table below shows, numerous projects each solve
+part of the problem. Some focus on specific platforms, others on particular use
+cases, but no single provider offers comprehensive coverage across all operating
+systems, architectures, and build configurations.
+
+This fragmentation creates several challenges:
+
+**Difficulty running the latest Erlang release.** Building Erlang/OTP from
+source requires installing toolchains, satisfying dependencies, and navigating
+platform-specific quirks, many of which are poorly documented. Package managers
+like apt, brew, and chocolatey often lag behind official releases by weeks or
+months. Users who need a specific version for a specific platform may find no
+pre-built binary exists.
+
+**Duplicated effort across downstream projects.** Products built on Erlang,
+such as RabbitMQ, Livebook, and tools using Burrito for packaging, must each
+solve binary distribution independently. This leads to repeated work and
+inconsistent approaches across the ecosystem.
+
+**Regulatory compliance burden.** The EU Cyber Resilience Act (CRA) introduces
+requirements for software supply chain transparency, including SBOMs, VEX
+disclosures, and timely security patches. Meeting these requirements is simpler
+when builds come from a single, well-maintained source rather than a patchwork
+of providers with varying practices.
+
+**Lack of a consolidation point.** Without an official, EEF-endorsed
+distribution, the ecosystem has no standard to rally around. A central
+initiative with a defined maintenance process, not reliant on individual
+maintainer availability, gives providers and users a sustainable foundation to
+build upon, reducing fragmentation over time.
+
 ## Goals
 
 * Provide Central & Official Erlang Binary Distribution for the Ecosystem
