@@ -154,6 +154,15 @@ Not all of those requirements need to be fulfilled to get started.
 * Offers a Discovery API to locate the right image for the user (OS / Arch, OTP Version, Flavor, Library versions etc.)
 * Can profit from free OSS Infrastructure like CI, Storage & CDN
 
+### Release Testing
+* Builds undergo release testing to validate outputs before publication
+* Full OTP test suite is comprehensive and resource-intensive; only a selected subset runs
+* Selected tests verify:
+  - Binary functionality (can start BEAM, run basic commands)
+  - Platform-specific linking (OpenSSL, ncurses, etc.)
+  - Cross-platform consistency
+* Tests prove the build works; they don't replace OTP's upstream testing
+
 ## Design Proposal
 
 ```mermaid
@@ -173,6 +182,7 @@ flowchart TB
         Linux["Linux Build SDK<br/>(Yocto + QEMU)"]
         macOS["macOS Build SDK<br/>(Nix)"]
         Windows["Windows Build SDK<br/>(WSL + MSVC)"]
+        Tests["Release Tests<br/>(Smoke Tests)"]
     end
 
     subgraph Artifacts["Build Artifacts"]
@@ -187,7 +197,8 @@ flowchart TB
 
     Repo --> Actions
     Actions --> Linux & macOS & Windows
-    Linux & macOS & Windows --> Binaries & Docker
+    Linux & macOS & Windows --> Tests
+    Tests --> Binaries & Docker
     Binaries --> GHCR
     Docker --> GHCR
     SBOM --> GHCR
