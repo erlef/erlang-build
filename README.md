@@ -101,6 +101,17 @@ to get a good overview about how Erlang/OTP are being packaged by different OSS 
 | [openbsd](https://github.com/openbsd/ports/tree/master/lang/erlang) | Also per version, 26, 27 and 28 |
 | [netbsd](https://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/lang/erlang/index.html) | single version [support for 27](https://github.com/NetBSD/pkgsrc/tree/trunk/lang/erlang/)|
 
+## Possible Future Consumers
+
+The following tools and projects could potentially integrate with the official Erlang builds. They could use the Discovery API to locate appropriate releases, download binaries directly from the OCI registry, and verify artifact integrity using cosign signatures.
+
+* [asdf erlang plugin](https://github.com/asdf-vm/asdf-erlang)
+* [winget](https://github.com/microsoft/winget-cli)
+* [Homebrew](https://github.com/Homebrew/homebrew-core/blob/master/Formula/e/erlang.rb)
+* [Elixir install.sh](https://elixir-lang.org/install.sh)
+* [Hex.pm Bob](https://github.com/hexpm/bob) consumers
+* [erlef/setup-beam GitHub Action](https://github.com/erlef/setup-beam)
+
 ## Requirements
 
 Not all of those requirements need to be fulfilled to get started.
