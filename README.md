@@ -105,12 +105,22 @@ to get a good overview about how Erlang/OTP are being packaged by different OSS 
 
 The following tools and projects could potentially integrate with the official Erlang builds. They could use the Discovery API to locate appropriate releases, download binaries directly from the OCI registry, and verify artifact integrity using cosign signatures.
 
+### Version Managers & CI Tools
 * [asdf erlang plugin](https://github.com/asdf-vm/asdf-erlang)
 * [winget](https://github.com/microsoft/winget-cli)
 * [Homebrew](https://github.com/Homebrew/homebrew-core/blob/master/Formula/e/erlang.rb)
 * [Elixir install.sh](https://elixir-lang.org/install.sh)
 * [Hex.pm Bob](https://github.com/hexpm/bob) consumers
 * [erlef/setup-beam GitHub Action](https://github.com/erlef/setup-beam)
+
+### Cross-Architecture Release Builders
+
+Developers building products that ship Erlang releases for multiple target architectures. Using rebar3's `include_erts` option, they can bundle a pre-built Erlang runtime for a different architecture than their build machine (e.g., building on x86-64 but targeting aarch64).
+
+Examples include:
+* [RabbitMQ](https://github.com/rabbitmq/rabbitmq-server) - ships releases for multiple platforms
+* [OpenRiak](https://github.com/OpenRiak/riak) - distributed database with multi-platform releases
+* Any project using rebar3 releases with cross-architecture deployment targets
 
 ## Requirements
 
