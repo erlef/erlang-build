@@ -74,6 +74,7 @@ to get a good overview about how Erlang/OTP are being packaged by different OSS 
 |----------|-------|
 | [kerl](https://github.com/kerl/kerl) | Easy building and installing of Erlang/OTP instances |
 | [asdf erlang plugin](https://github.com/asdf-vm/asdf-erlang) | Erlang plugin for asdf version manager | 
+| [mise erlang plugin](https://mise.jdx.dev/lang/erlang.html) | Erlang plugin for mise version manager | 
 
 ### Package management
 
